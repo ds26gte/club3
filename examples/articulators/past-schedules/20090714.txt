@@ -1,0 +1,13 @@
+tm bash
+word johns
+joke christian
+poet bash
+speaker kim
+speaker judyp
+speaker joseph
+;speaker mary.cheyne
+ge brad
+eval laura
+eval bonnie
+eval wu
+topics johns

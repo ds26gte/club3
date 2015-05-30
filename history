@@ -1,0 +1,64 @@
+May 30, 2015
+
+If club3 is called with no arg, assume 'schedules'.
+
+Generate HTML5 (simpler).
+
+Reorder expressions in *.lisp files so SBCL doesn't give style
+warnings even without muffling.
+
+Aug 23, 2009
+
+Avoid multiple warnings on same non-member.
+
+Mar 18, 2009
+
+Used the SBCL profiler.  diff-date, which calls encode-yyyymmdd-time,
+which calls encode-universal-time, was a bottleneck.  Specified a
+time-zone argument in the call to encode-universal-time, as otherwise CL
+spends a surprisingly huge amount of time determining the correct (but
+useless) TZ.  Since we're only calculating time differences, and
+meetings take place in the same location (not to mention just once a
+week), it doesn't matter what TZ is chosen.
+
+encode-universal-time still takes up time and space, probably because it
+traffics in numbers of seconds since 1900 (even if they are fixnums in
+the 64bit Lisps).  So have rewritten encode-yyyymmdd-time to avoid
+encode-universal-time.  Writing one's own fixnum date arithmetic is
+tedious and error-prone (have to keep track of "30 days hath
+September"), but in this case maybe necessary.  But at least was able to
+avoid dealing with leap years, as that level of accuracy is not needed
+to calculate time-differences in units of weeks.
+
+Keep the availability info in club3's canonical format (i.e., days since
+8 years ago), so they don't have to be repeatedly converted from
+yyyymmdd to canonical when calculating demerits.  Keep yyyymmdd date
+strictly for printing and naming files.
+
+Mar 15, 2009
+
+Some type declarations to speed things up.  
+
+Mar 14, 2009
+
+Add dotopo.lisp for easy compilation.  Compiling club3 compiles all
+the other files in the right order.
+
+Mar 10, 2009
+
+Load an init file club3rc.lisp that has all the initialization info (both
+required and optional) as Lisp code.  This avoids the plethora of
+seemingly-user-friendly .txt files that need to be parsed. 
+
+Feb 23, 2009
+
+List of roles can be deduced from list of lineups.  Only role difficulty
+needs to be available, optionally.
+
+Feb 19, 2009
+
+Use exponential decay to calculate demerits.
+
+Feb 18, 2009
+
+First working cut.

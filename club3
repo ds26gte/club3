@@ -1,0 +1,37 @@
+# last change 2015-05-30
+
+CLUB3DIR=~/public_html/club3/lisp
+
+if test $# -eq 0
+then club3arg=schedules
+fi
+
+if test "$LISP" = abcl
+then
+abcl --load $CLUB3DIR/club3 \
+     --eval "(club3:generate :$club3arg)" --eval "(ext:quit)"
+
+elif test "$LISP" = clisp
+then
+clisp -q -q -i $CLUB3DIR/club3 \
+    -x "(club3:generate :$club3arg)" 
+
+elif test "$LISP" = clozure
+then 
+ccl -l $CLUB3DIR/club3 \
+    -e "(club3:generate :$club3arg)" -e "(ccl:quit)"
+
+elif test "$LISP" = cmu
+then
+lisp -quiet -load $CLUB3DIR/club3 \
+            -eval "(club3:generate :$club3arg)" -eval "(ext:quit)"
+
+elif test "$LISP" = ecl
+then
+ecl -q -load $CLUB3DIR/club3 \
+       -eval "(club3:generate :$club3arg)" -eval "(si:quit)"
+
+else # assume sbcl
+sbcl --noinform --load $CLUB3DIR/club3 \
+     --eval "(club3:generate :$club3arg)" --eval "(sb-ext:quit)"
+fi

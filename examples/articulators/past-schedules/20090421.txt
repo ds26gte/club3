@@ -1,0 +1,14 @@
+;open house at northboro hist soc
+tm bash
+speaker brad
+speaker rick
+speaker laura
+speaker kim
+speaker judyp
+eval hilary
+eval lori
+eval lauryn
+eval dorai
+eval brad
+ge charlie
+topics stephanie

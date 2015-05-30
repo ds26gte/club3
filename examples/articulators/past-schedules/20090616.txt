@@ -1,0 +1,13 @@
+tm brad
+skills judyp
+word lauryn
+joke joseph
+;poet  nil
+speaker lori
+speaker hilary
+speaker laura
+ge rick
+eval johns
+eval andrewc
+eval bobn
+topics lauryn

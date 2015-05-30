@@ -1,0 +1,7 @@
+;contest
+tm rubem
+speaker johns
+speaker laura
+speaker judyp
+speaker brad
+topics hilary

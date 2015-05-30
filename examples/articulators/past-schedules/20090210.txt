@@ -1,0 +1,12 @@
+;soup & stories -- info from judyp
+
+;evaluated
+
+speaker rick
+speaker kim
+
+;non-manual, should these go in?
+
+speaker brad
+speaker judyk  
+speaker johns

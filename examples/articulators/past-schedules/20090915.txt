@@ -1,0 +1,5 @@
+;contest
+topics rick
+speaker lenny
+speaker johns
+speaker brad
