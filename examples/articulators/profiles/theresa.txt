@@ -1,0 +1,20 @@
+
+Name: Theresa
+
+Number of speeches (?): 27
+
+Assignable roles: (skills poet speaker ge topics tm eval word joke)
+
+Availability: (not (until further-notice))
+
+Last time performing role: 
+        topics: ?
+          eval: ?
+            ge: ?
+       speaker: Jan 2, 2007
+          poet: ?
+          joke: ?
+          word: ?
+            tm: ?
+        skills: ?
+

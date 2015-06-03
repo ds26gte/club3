@@ -1,0 +1,20 @@
+
+Name: Wu
+
+Number of speeches (?): 11
+
+Assignable roles: (skills poet ge topics tm eval speaker word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: June 9, 2009
+          eval: Sept 22, 2009
+            ge: Sept 29, 2009
+       speaker: May 5, 2009
+          poet: July 21, 2009
+          joke: Aug 4, 2009
+          word: ?
+            tm: April 14, 2009
+        skills: ?
+

@@ -1,0 +1,20 @@
+
+Name: Connie
+
+Number of speeches (?): 7
+
+Assignable roles: (skills poet ge topics tm eval speaker word joke)
+
+Availability: (not (on {Aug 11, 2009} {Aug 18, 2009}))
+
+Last time performing role: 
+        topics: Feb 24, 2009
+          eval: July 7, 2009
+            ge: July 21, 2009
+       speaker: March 31, 2009
+          poet: Jan 13, 2009
+          joke: March 17, 2009
+          word: ?
+            tm: Jan 27, 2009
+        skills: ?
+

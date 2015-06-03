@@ -1,0 +1,19 @@
+
+Name: Lenny
+
+Number of speeches (?): 6
+
+Assignable roles: (topics tm eval speaker poet word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: Aug 25, 2009
+          eval: Sept 22, 2009
+            ge: Oct 6, 2009
+       speaker: Sept 15, 2009
+          poet: Aug 4, 2009
+          joke: April 14, 2009
+          word: Oct 20, 2009
+            tm: Sept 1, 2009
+

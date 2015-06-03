@@ -1,0 +1,16 @@
+
+Name: Deepak
+
+Number of speeches (?): 2
+
+Assignable roles: (speaker poet word joke)
+
+Availability: (always)
+
+Last time performing role: 
+          eval: July 21, 2009
+       speaker: July 7, 2009
+          poet: July 28, 2009
+          joke: April 7, 2009
+          word: May 19, 2009
+

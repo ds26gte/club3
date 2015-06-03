@@ -1,0 +1,20 @@
+
+Name: Lauryn
+
+Number of speeches (?): 17
+
+Assignable roles: (skills ge topics tm eval poet word joke)
+
+Availability: (not (until further-notice))
+
+Last time performing role: 
+        topics: June 16, 2009
+          eval: June 23, 2009
+            ge: May 12, 2009
+       speaker: Jan 13, 2009
+          poet: Feb 3, 2009
+          joke: May 19, 2009
+          word: June 16, 2009
+            tm: June 9, 2009
+        skills: ?
+

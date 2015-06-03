@@ -1,0 +1,20 @@
+
+Name: Joseph
+
+Number of speeches (?): 7
+
+Assignable roles: (skills poet ge topics tm eval speaker word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: Sept 22, 2009
+          eval: July 7, 2009
+            ge: ?
+       speaker: Sept 1, 2009
+          poet: Nov 18, 2008
+          joke: June 16, 2009
+          word: ?
+            tm: Aug 11, 2009
+        skills: ?
+

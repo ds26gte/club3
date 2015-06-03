@@ -1,10 +1,10 @@
-.TH club3
+.=* club3
 
-`club3` is a program to schedule a series of meetings of the
+club3 is a program to schedule a series of meetings of the
 Toastmaster™
 type fairly.
 
-.SS Installation
+.= Installation
 
 Get club3 from GitHub:
 
@@ -12,7 +12,8 @@ Get club3 from GitHub:
 git clone https://github.com/ds26gte/club3
 .EE
 
-Unpack it to create a directory `club3`,
+This produces
+a directory `club3`,
 which contains a shell script called `club3`.  Put a copy of or soft link to
 `club3` in your `PATH`.
 
@@ -28,11 +29,11 @@ identify the directory containing `club3.lisp`.  Change it to suit you.
 The script `club3` also sets and uses an environment variable `LISP` to identify
 your Common Lisp system.  Change to suit you.
 
-*Optional:* You may compile `club3.lisp` (using the Common Lisp function
+Optional: You may compile `club3.lisp` (using the Common Lisp function
 `compile-file`).  Only `club3.lisp` need be explicitly compiled — it will
 take care of compiling the other `.lisp` files.
 
-.SS Usage
+.= Usage
 
 In a directory that contains all the data relevant to your club, call
 `club3` with the argument `schedules` or `profiles`.
@@ -43,7 +44,7 @@ influences the result.  This input data consists of an init file
 scheduling history of the club.  For an example, see
 the directory `examples/articulators` in the distribution.
 
-.SS Generating schedules
+.= Generating schedules
 
 .EX
 % club3 schedules
@@ -52,10 +53,14 @@ the directory `examples/articulators` in the distribution.
 generates schedules.  (I.e., type `club3 schedules` at your Unix
 prompt `%`.)
 
+(For convenience, the argument `schedules` can be dropped:
+calling `club3` is equivalent to calling `club3 schedules`.)
+
 The schedules consist of a `.txt` file for each date
 in the calendar (see below), and an HTML file `new-schedules.html`
-that lists the schedules as an easy-to-read and -print table.  For a
-saved example, see ./examples/articulators/current-schedules.html.
+that lists the schedules as an easy-to-read and -print table.
+For a saved example, see
+`examples/articulators/current-schedules.html` in the club3 distro.
 
 The generated `.txt` files can be inserted into `past-schedules` (see
 below) to influence the course of future schedules (created by future
@@ -65,17 +70,17 @@ that it accurately records the members who actually performed the roles
 (since club members typically negotiate substitutions up to the very
 last minute because of unforeseen circumstances).
 
-.SS Generating profiles
+.= Generating profiles
 
 .EX
 % club3 profiles
 .EE
 
 generates member profiles in a subdirectory called `profiles`, browsable
-via an `index.html` file.   Example:
-./examples/articulators/profiles/index.html.
+via an `index.html` file.
+Example: `examples/articulators/profiles/index.html` in the distro.
 
-.SS Initialization
+.= Initialization
 
 The init file `club3rc.lisp` is essential.  At the very least, it must
 use the operators `members`, `lineups`, and `calendar` to respectively list
@@ -90,9 +95,9 @@ equitable and feasible.
 The operators `full-names`, `role-names`, and `club-name` help make the output
 schedules more readable.
 
-Example: ./examples/articulators/club3rc.lisp.
+Example: `examples/articulators/club3rc.lisp` in the distro.
 
-.SS Members
+.= Members
 
 The operator `members` lists the members in the club, a symbol for each
 member.  E.g.,
@@ -103,7 +108,7 @@ member.  E.g.,
          ulrich vanessa willy xavier yul zoe)
 .EE
 
-.SS Lineups
+.= Lineups
 
 The operator `lineups` introduces the various prescribed lineups for the
 club’s meetings.  Each lineup is a list whose first element is a keyword
@@ -141,7 +146,7 @@ of different type.  The idea is to list all the roles possible in all
 the meetings, and have the column for each meeting fill only the row
 that is relevant to it.
 
-.SS Calendar
+.= Calendar
 
 The operator `calendar` contains a series of dates for which meetings need
 to be scheduled.  Each date is given as a dotted integer YYYY.MM.DD; thus,
@@ -154,7 +159,7 @@ to be scheduled.  Each date is given as a dotted integer YYYY.MM.DD; thus,
 
 If the type of meeting to be held on a particular date differs from the
 `:default` type of meeting, then the date is enclosed as the first element
-in a list whose second element is the type of meeting. E.g.
+in a list whose second element is the type of meeting. E.g.,
 
 .EX
 (calendar 2009.03.03
@@ -172,7 +177,7 @@ for that date.  (This is useful to mark certain dates for special
 activities that do not require scheduling, or have been scheduled by
 other means.)
 
-.SS Availability
+.= Availability
 
 The `availability` operator contains exceptional information about the
 temporal availability of the members.  By default, members are assumed
@@ -186,7 +191,7 @@ such as `after`, `always`, `before`, `between`, `from`,
 are dates or the results of other operations.
 
 `and`, `not`, and `or` are also allowed, but can only operate on the results of
-other operations (i.e.  not directly on dates).  [Use `on` if you find
+other operations (i.e., not directly on dates).  [Use `on` if you find
 yourself wanting to use `and`/`not`/`or` directly on dates.  E.g.,
 `(not (on 2009.03.17))`.]
 
@@ -220,7 +225,7 @@ says that `theresa` will not be available until further notice.
 states that `kumaran` will not be available on Feb 24, April 28, May 26, and
 June 30 of 2009; and also between March 10 and 31 of 2009.
 
-.SS Role-difficulty
+.= Role-difficulty
 
 Using the `role-difficulty` operator, you can identify specific roles to
 be either `:easy`, `:intermediate`, or `:hard`.  By default, all roles are
@@ -231,7 +236,7 @@ considered to be `:easy`.  Example entries:
                  (eval :hard))
 .EE
 
-.SS Expertise
+.= Expertise
 
 By default, every member is considered to be capable of doing all and
 only the `:easy` roles  To modify this, use the `expertise` operator.  Each
@@ -271,14 +276,14 @@ member’s expertise.
            (judyk (- speaker topics)))
 .EE
 
-.SS Eagerness
+.= Eagerness
 
 By default, all members are supposed to exhibit the same moderate level
 of eagerness to be scheduled.  However, using the `eagerness` operator,
 you can add an eagerness level to a member.  Each argument consists of
 the member name followed by a number between 0 and 3 inclusive: 0 for
 inactive; 1 for taking it slow; 2 for normal (the default); and 3 for
-fast track.  E.g.
+fast track.  E.g.,
 
 .EX
 (eagerness (joseph 3)
@@ -289,7 +294,7 @@ fast track.  E.g.
 states that `theresa` is inactive, `judyk` wants to take it slow, and `joseph`
 wants the fast track.
 
-.SS Number-of-trials
+.= Number-of-trials
 
 `club3` uses a system that ascribes demerits to each member for a role on
 any day (based on history, availability, etc).  Since a lineup is filled
@@ -313,7 +318,7 @@ To change the number of trials, use the `number-of-trials` operator, e.g.,
 (number-of-trials 200)
 .EE
 
-.SS Full-names
+.= Full-names
 
 The symbol used for each member is typically capitalized  when printing
 out schedules or profiles; thus, `charlie` becomes “Charlie” and `marcia`
@@ -325,7 +330,7 @@ To properly capitalize them in the output schedule (so the Judys don’t
 judge you), use the `full-names` operator:
 
 .EX
-(full-names (judyk “Judy K”)
+(full-names (judyk "Judy K")
             (judyp "Judy P"))
 .EE
 
@@ -341,39 +346,39 @@ For routine scheduling, however, a first name, sometimes enhanced with a
 disambiguating initial, is usually
 enough.
 
-.SS Role-names
+.= Role-names
 
 `lineups` uses abbreviated symbols for each role.  When printing out the
 schedule as an HTML file, the roles are capitalized, and if there are
 multiple instances of a role in a meeting, each role instance gets a number suffix
-(e.g. “Speaker #2”).  If you want the printed name for a role to be
+(e.g., “Speaker #2”).  If you want the printed name for a role to be
 different than the mere capitalization of the role symbol, you may use
-the `role-names` operator, e.g.
+the `role-names` operator, e.g.,
 
 .EX
-(role-names (tm “Toastmaster”)
+(role-names (tm "Toastmaster")
             (eval "Evaluator"))
 .EE
 
-.SS Club-name
+.= Club-name
 
 The name of the club is set using the operator `club-name`.  This name is
 used to title the schedules.
 
 .EX
-(club-name “The Articulators”)
+(club-name "The Articulators")
 .EE
 
-.SS History
+.= History
 
 The subdirectory `past-schedules` contains the schedules (the `.txt` files)
-generated for previous calendars — i.e. by previous calls to `club3 schedules`.  While optional, `past-schedules` is useful to maintain, as
+generated for previous calendars — i.e., by previous calls to `club3 schedules`.  While optional, `past-schedules` is useful to maintain, as
 it provides the historical information necessary to ensure that no
 member is over- or underscheduled.
 
-.SS System requirements
+.= System requirements
 
-`club3` runs on any Common Lisp in a Unix-like environment, e.g.
+`club3` runs on any Common Lisp in a Unix-like environment, e.g.,
 -: ABCL common-lisp.net/project/armedbear,
 -: CLISP clisp.sf.net,
 -: Clozure CL ccl.clozure.com,

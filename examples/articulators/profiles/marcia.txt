@@ -1,0 +1,18 @@
+
+Name: Marcia
+
+Number of speeches (?): 4
+
+Assignable roles: (eval speaker poet word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: Oct 20, 2009
+          eval: Aug 4, 2009
+       speaker: Aug 25, 2009
+          poet: Oct 28, 2008
+          joke: Aug 18, 2009
+          word: June 23, 2009
+            tm: Oct 6, 2009
+

@@ -1,0 +1,20 @@
+
+Name: Rick
+
+Number of speeches (?): 10
+
+Assignable roles: (skills speaker ge topics tm eval poet word joke)
+
+Availability: (and (not (between {July 1, 2009} {July 31, 2009})))
+
+Last time performing role: 
+        topics: Sept 15, 2009
+          eval: Sept 8, 2009
+            ge: June 16, 2009
+       speaker: Oct 6, 2009
+          poet: ?
+          joke: Feb 24, 2009
+          word: Dec 30, 2008
+            tm: ?
+        skills: ?
+

@@ -1,0 +1,20 @@
+
+Name: Lori
+
+Number of speeches (?): 6
+
+Assignable roles: (topics tm eval speaker poet word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: July 21, 2009
+          eval: Sept 22, 2009
+            ge: March 17, 2009
+       speaker: Aug 25, 2009
+          poet: Aug 19, 2008
+          joke: March 31, 2009
+          word: Oct 6, 2008
+            tm: July 28, 2009
+        skills: Oct 20, 2009
+

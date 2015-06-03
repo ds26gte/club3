@@ -1,0 +1,18 @@
+
+Name: Baha
+
+Number of speeches (?): 10
+
+Assignable roles: (poet speaker word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: Jan 13, 2009
+          eval: May 5, 2009
+            ge: April 14, 2009
+       speaker: May 19, 2009
+          poet: Sept 1, 2009
+          joke: ?
+          word: July 21, 2009
+

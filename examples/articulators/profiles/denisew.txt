@@ -1,0 +1,13 @@
+
+Name: Denise
+
+Number of speeches (?): 0
+
+Assignable roles: (word joke)
+
+Availability: (not (until further-notice))
+
+Last time performing role: 
+          joke: ?
+          word: ?
+

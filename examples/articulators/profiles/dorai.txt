@@ -1,0 +1,20 @@
+
+Name: Dorai
+
+Number of speeches (?): 10
+
+Assignable roles: (skills poet ge topics tm eval speaker word joke)
+
+Availability: (not (until further-notice))
+
+Last time performing role: 
+        topics: ?
+          eval: June 2, 2009
+            ge: Jan 6, 2009
+       speaker: Jan 20, 2009
+          poet: May 19, 2009
+          joke: ?
+          word: Feb 3, 2009
+            tm: March 24, 2009
+        skills: ?
+

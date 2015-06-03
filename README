@@ -1,6 +1,4 @@
-;last change 2015-05-30
+club3 is a Common Lisp program that schedules a series of
+meetings of the Toastmaster type fairly.
 
-The documentation is in the file index.txt.
-
-An HTML version of the documentation is available for browsing on
-the Web at http://www.ccs.neu.edu/~dorai/club3/index.html.
+Documentation at http://ds26gte.github.io/club3/index.html.

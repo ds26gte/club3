@@ -1,0 +1,20 @@
+
+Name: Rubem
+
+Number of speeches (?): 12
+
+Assignable roles: (skills ge topics tm eval speaker poet word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: June 2, 2009
+          eval: Oct 13, 2009
+            ge: July 7, 2009
+       speaker: May 12, 2009
+          poet: March 3, 2009
+          joke: Sept 8, 2009
+          word: Sept 1, 2009
+            tm: May 5, 2009
+        skills: ?
+

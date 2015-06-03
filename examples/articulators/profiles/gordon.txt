@@ -1,0 +1,20 @@
+
+Name: Gordon
+
+Number of speeches (?): 0
+
+Assignable roles: (skills tm poet speaker ge eval topics word joke)
+
+Availability: (not (until further-notice))
+
+Last time performing role: 
+        topics: ?
+          eval: ?
+            ge: ?
+       speaker: ?
+          poet: ?
+          joke: ?
+          word: ?
+            tm: ?
+        skills: ?
+

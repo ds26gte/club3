@@ -1,0 +1,19 @@
+
+Name: Alejandro
+
+Number of speeches (?): 2
+
+Assignable roles: (speaker word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: Oct 6, 2009
+          eval: Aug 18, 2009
+            ge: Sept 1, 2009
+       speaker: Oct 20, 2009
+          poet: Oct 13, 2009
+          joke: ?
+          word: ?
+            tm: Aug 4, 2009
+

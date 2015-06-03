@@ -1,0 +1,19 @@
+
+Name: Bonnie
+
+Number of speeches (?): 5
+
+Assignable roles: (topics tm eval speaker word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: Nov 4, 2008
+          eval: July 14, 2009
+            ge: Dec 16, 2008
+       speaker: Sept 1, 2009
+          poet: Jan 27, 2009
+          joke: ?
+          word: Oct 28, 2008
+            tm: ?
+

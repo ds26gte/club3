@@ -1,0 +1,18 @@
+
+Name: Steve
+
+Number of speeches (?): 3
+
+Assignable roles: (eval speaker word joke)
+
+Availability: (not (on {Aug 11, 2009}))
+
+Last time performing role: 
+        topics: Sept 8, 2009
+          eval: Aug 18, 2009
+       speaker: July 21, 2009
+          poet: Jan 20, 2009
+          joke: Oct 20, 2009
+          word: ?
+            tm: Sept 29, 2009
+

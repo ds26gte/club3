@@ -1,0 +1,20 @@
+
+Name: John
+
+Number of speeches (?): 6
+
+Assignable roles: (skills ge topics tm eval speaker poet word joke)
+
+Availability: (not (until {Sept 1, 2009}))
+
+Last time performing role: 
+        topics: July 14, 2009
+          eval: Sept 1, 2009
+            ge: May 26, 2009
+       speaker: Sept 15, 2009
+          poet: May 5, 2009
+          joke: Aug 25, 2009
+          word: July 14, 2009
+            tm: July 21, 2009
+        skills: ?
+

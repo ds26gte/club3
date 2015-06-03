@@ -1,0 +1,20 @@
+
+Name: Judy P
+
+Number of speeches (?): 13
+
+Assignable roles: (skills ge topics tm eval speaker poet word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: June 23, 2009
+          eval: Oct 20, 2009
+            ge: July 28, 2009
+       speaker: Oct 13, 2009
+          poet: Dec 30, 2008
+          joke: Sept 22, 2009
+          word: July 7, 2009
+            tm: April 7, 2009
+        skills: June 16, 2009
+

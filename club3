@@ -1,6 +1,8 @@
-# last change 2015-05-30
+# last change 2015-06-02
 
-CLUB3DIR=~/public_html/club3/lisp
+if test -z $CLUB3DIR
+then CLUB3DIR=~/src/club3/lisp
+fi
 
 if test $# -eq 0
 then club3arg=schedules

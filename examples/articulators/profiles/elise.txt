@@ -1,0 +1,14 @@
+
+Name: Elise
+
+Number of speeches (?): 1
+
+Assignable roles: (word joke)
+
+Availability: (always)
+
+Last time performing role: 
+       speaker: Aug 4, 2009
+          joke: ?
+          word: ?
+

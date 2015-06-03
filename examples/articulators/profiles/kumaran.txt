@@ -1,0 +1,20 @@
+
+Name: Kumaran
+
+Number of speeches (?): 2
+
+Assignable roles: (skills tm poet ge eval topics speaker word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: March 17, 2009
+          eval: Feb 17, 2009
+            ge: Jan 27, 2009
+       speaker: Jan 2, 2007
+          poet: April 14, 2009
+          joke: ?
+          word: ?
+            tm: July 7, 2009
+        skills: ?
+

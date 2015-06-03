@@ -1,0 +1,16 @@
+
+Name: Andre
+
+Number of speeches (?): 3
+
+Assignable roles: (eval speaker poet word joke)
+
+Availability: (always)
+
+Last time performing role: 
+          eval: ?
+       speaker: Oct 20, 2009
+          poet: Sept 29, 2009
+          joke: April 28, 2009
+          word: Sept 8, 2009
+

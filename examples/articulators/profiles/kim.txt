@@ -1,0 +1,20 @@
+
+Name: Kim
+
+Number of speeches (?): 19
+
+Assignable roles: (skills ge topics tm eval speaker poet word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: May 19, 2009
+          eval: April 28, 2009
+            ge: June 9, 2009
+       speaker: Sept 22, 2009
+          poet: April 7, 2009
+          joke: Oct 13, 2009
+          word: Aug 18, 2009
+            tm: June 23, 2009
+        skills: ?
+

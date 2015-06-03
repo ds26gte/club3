@@ -1,0 +1,20 @@
+
+Name: Judy K
+
+Number of speeches (?): 9
+
+Assignable roles: (skills ge tm eval poet word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: July 7, 2009
+          eval: Oct 20, 2009
+            ge: Dec 30, 2008
+       speaker: Feb 10, 2009
+          poet: Dec 9, 2008
+          joke: March 3, 2009
+          word: Sept 22, 2009
+            tm: April 28, 2009
+        skills: ?
+

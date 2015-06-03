@@ -1,0 +1,20 @@
+
+Name: Brad
+
+Number of speeches (?): 14
+
+Assignable roles: (skills ge topics tm eval speaker poet word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: Oct 13, 2009
+          eval: Sept 29, 2009
+            ge: Oct 13, 2009
+       speaker: Sept 15, 2009
+          poet: Oct 20, 2009
+          joke: Sept 1, 2009
+          word: Aug 11, 2009
+            tm: June 16, 2009
+        skills: ?
+

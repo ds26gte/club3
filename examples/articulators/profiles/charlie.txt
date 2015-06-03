@@ -1,0 +1,20 @@
+
+Name: Charlie
+
+Number of speeches (?): 12
+
+Assignable roles: (skills ge topics tm eval speaker poet word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: June 30, 2009
+          eval: Oct 13, 2009
+            ge: May 5, 2009
+       speaker: July 21, 2009
+          poet: May 12, 2009
+          joke: Dec 23, 2008
+          word: Aug 4, 2009
+            tm: Sept 8, 2009
+        skills: ?
+

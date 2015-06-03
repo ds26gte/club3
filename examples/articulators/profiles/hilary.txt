@@ -1,0 +1,20 @@
+
+Name: Hilary
+
+Number of speeches (?): 14
+
+Assignable roles: (skills ge topics tm eval speaker poet word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: Sept 29, 2009
+          eval: Sept 1, 2009
+            ge: Oct 20, 2009
+       speaker: Sept 8, 2009
+          poet: May 26, 2009
+          joke: Aug 11, 2009
+          word: June 9, 2009
+            tm: Sept 22, 2009
+        skills: ?
+

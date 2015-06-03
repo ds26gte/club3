@@ -1,0 +1,18 @@
+
+Name: Christian
+
+Number of speeches (?): 3
+
+Assignable roles: (speaker eval poet word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: Aug 18, 2009
+          eval: ?
+       speaker: Sept 8, 2009
+          poet: ?
+          joke: July 14, 2009
+          word: June 2, 2009
+            tm: Aug 25, 2009
+

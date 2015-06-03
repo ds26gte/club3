@@ -1,0 +1,15 @@
+
+Name: Shruti
+
+Number of speeches (?): 2
+
+Assignable roles: (speaker word joke)
+
+Availability: (always)
+
+Last time performing role: 
+       speaker: Sept 29, 2009
+          poet: Aug 18, 2009
+          joke: ?
+          word: Oct 13, 2009
+

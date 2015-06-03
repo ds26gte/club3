@@ -1,0 +1,15 @@
+
+Name: Prasad
+
+Number of speeches (?): 2
+
+Assignable roles: (speaker poet word joke)
+
+Availability: (always)
+
+Last time performing role: 
+       speaker: Oct 13, 2009
+          poet: July 7, 2009
+          joke: May 5, 2009
+          word: Sept 29, 2009
+

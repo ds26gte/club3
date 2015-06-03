@@ -1,0 +1,15 @@
+
+Name: Andrew
+
+Number of speeches (?): 1
+
+Assignable roles: (speaker poet word joke)
+
+Availability: (always)
+
+Last time performing role: 
+       speaker: May 26, 2009
+          poet: Sept 8, 2009
+          joke: Oct 6, 2009
+          word: May 5, 2009
+

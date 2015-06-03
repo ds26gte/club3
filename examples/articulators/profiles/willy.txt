@@ -1,0 +1,18 @@
+
+Name: Willy
+
+Number of speeches (?): 5
+
+Assignable roles: (topics tm eval speaker poet word joke)
+
+Availability: (not (until further-notice))
+
+Last time performing role: 
+        topics: ?
+          eval: Dec 23, 2008
+       speaker: April 28, 2009
+          poet: Nov 4, 2008
+          joke: March 24, 2009
+          word: Jan 13, 2009
+            tm: ?
+

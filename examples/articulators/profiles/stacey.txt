@@ -1,0 +1,15 @@
+
+Name: Stacey
+
+Number of speeches (?): 2
+
+Assignable roles: (speaker word joke)
+
+Availability: (always)
+
+Last time performing role: 
+       speaker: Oct 20, 2009
+          poet: Aug 11, 2009
+          joke: ?
+          word: Oct 6, 2009
+

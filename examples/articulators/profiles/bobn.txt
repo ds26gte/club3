@@ -1,0 +1,20 @@
+
+Name: Bob
+
+Number of speeches (?): 11
+
+Assignable roles: (skills poet ge topics tm eval speaker word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: Jan 27, 2009
+          eval: Aug 25, 2009
+            ge: April 28, 2009
+       speaker: Aug 11, 2009
+          poet: June 2, 2009
+          joke: Jan 20, 2009
+          word: ?
+            tm: Oct 20, 2009
+        skills: ?
+

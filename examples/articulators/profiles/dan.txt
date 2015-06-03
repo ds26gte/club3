@@ -1,0 +1,20 @@
+
+Name: Dan
+
+Number of speeches (?): 11
+
+Assignable roles: (skills poet ge topics tm eval speaker word joke)
+
+Availability: (always)
+
+Last time performing role: 
+        topics: April 28, 2009
+          eval: July 21, 2009
+            ge: Aug 25, 2009
+       speaker: March 31, 2009
+          poet: Dec 16, 2008
+          joke: ?
+          word: Jan 6, 2009
+            tm: Oct 13, 2009
+        skills: ?
+
