@@ -121,8 +121,8 @@ roles.
                ge eval eval eval topics)))
 ----
 
-Roles can repeat: the above lineup allows for three `speaker`++s++ and three
-`eval`++s++.
+Roles can repeat: the above lineup allows for three ``speaker``s and three
+``eval``s.
 
 The first lineup is considered the default lineup (even if it wasn’t
 explicitly named `:default`).  `lineups` can take more arguments if different
@@ -135,7 +135,7 @@ lineups are possible (for different meetings).
 ----
 
 This specifies a meeting of type `:topics-tuesday`, which differs from the
-`:default` meeting in that its lineup has only two `speaker`++s++ and two `eval`++s++.
+`:default` meeting in that its lineup has only two ``speaker``s and two ``eval``s.
 (The purpose of this meeting is plausibly to allow more time for `topics`
 than is possible in a `:default` meeting.)
 
@@ -386,7 +386,7 @@ http://cmucl.org[CMUCL],
 http://ecls.sf.net[ECL], and
 http://sbcl.sf.net[SBCL].
 (On Windows, you can get a Unix
-environment via Cygwin http://cygwin.com[Cygwin], which also
+environment via http://cygwin.com[Cygwin], which also
 provides CLISP.)
 
 —Dorai Sitaram
