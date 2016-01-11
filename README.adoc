@@ -8,9 +8,7 @@ type fairly.
 
 Get club3 from GitHub:
 
-----
-git clone https://github.com/ds26gte/club3
-----
+  git clone https://github.com/ds26gte/club3
 
 This produces
 a directory `club3`,
@@ -46,9 +44,7 @@ the directory `examples/articulators` in the distribution.
 
 == Generating schedules
 
-----
-% club3 schedules
-----
+  % club3 schedules
 
 generates schedules.  (I.e., type `club3 schedules` at your Unix
 prompt `%`.)
@@ -72,9 +68,7 @@ last minute because of unforeseen circumstances).
 
 == Generating profiles
 
-----
-% club3 profiles
-----
+  % club3 profiles
 
 generates member profiles in a subdirectory called `profiles`, browsable
 via an `index.html` file.
@@ -102,11 +96,9 @@ Example: `examples/articulators/club3rc.lisp` in the distro.
 The operator `members` lists the members in the club, a symbol for each
 member.  E.g.,
 
-----
-(members andrew brad charlie dan eileen fran george hilary ian judy
-         kim lori marcia nelson oliver prasad rick stephanie theresa
-         ulrich vanessa willy xavier yul zoe)
-----
+  (members andrew brad charlie dan eileen fran george hilary ian judy
+           kim lori marcia nelson oliver prasad rick stephanie theresa
+           ulrich vanessa willy xavier yul zoe)
 
 == Lineups
 
@@ -115,11 +107,9 @@ club’s meetings.  Each lineup is a list whose first element is a keyword
 describing the type of meeting, and whose second element is a list of
 roles.
 
-----
-(lineups (:default
-           (tm word joke poet speaker speaker speaker
-               ge eval eval eval topics)))
-----
+  (lineups (:default
+             (tm word joke poet speaker speaker speaker
+                 ge eval eval eval topics)))
 
 Roles can repeat: the above lineup allows for three ``speaker``s and three
 ``eval``s.
@@ -128,11 +118,9 @@ The first lineup is considered the default lineup (even if it wasn’t
 explicitly named `:default`).  `lineups` can take more arguments if different
 lineups are possible (for different meetings).
 
-----
-(lineups (:default ...)
-         (:topics-tuesday
-          (tm word joke poet speaker speaker ge eval eval topics)))
-----
+  (lineups (:default ...)
+           (:topics-tuesday
+            (tm word joke poet speaker speaker ge eval eval topics)))
 
 This specifies a meeting of type `:topics-tuesday`, which differs from the
 `:default` meeting in that its lineup has only two ``speaker``s and two ``eval``s.
@@ -152,23 +140,19 @@ The operator `calendar` contains a series of dates for which meetings need
 to be scheduled.  Each date is given as a dotted integer YYYY.MM.DD; thus,
 2009.02.24 is 2009 Feb 24.
 
-----
-(calendar 2009.03.03
-          2009.03.10)
-----
+  (calendar 2009.03.03
+            2009.03.10)
 
 If the type of meeting to be held on a particular date differs from the
 `:default` type of meeting, then the date is enclosed as the first element
 in a list whose second element is the type of meeting. E.g.,
 
-----
-(calendar 2009.03.03
-          (2009.03.10 :contest)
-          2009.03.17
-          2009.03.24
-          (2009.03.31 :skills-night)
-          (2009.04.07 :topics-tuesday))
-----
+  (calendar 2009.03.03
+            (2009.03.10 :contest)
+            2009.03.17
+            2009.03.24
+            (2009.03.31 :skills-night)
+            (2009.04.07 :topics-tuesday))
 
 The type of meeting is typically one of the keywords introduced by the
 `lineups` operator (see above).  However, it can be anything.  If it isn’t one
@@ -199,28 +183,22 @@ Dates are either in YYYY.MM.DD format or the keyword
 `:further-notice` (= ∞).
 Examples:
 
-----
-(availabilty (kim (not (between 2009.03.10 2009.03.21))))
-----
+  (availabilty (kim (not (between 2009.03.10 2009.03.21))))
 
 states that `kim` will not be available from March 3 to 21, 2009
 (inclusive).
 
-----
-(availability (kim ...)
-              (theresa (not (until :further-notice))))
-----
+  (availability (kim ...)
+                (theresa (not (until :further-notice))))
 
 says that `theresa` will not be available until further notice.
 
-----
-(availability (kim ...)
-              (theresa ...)
-              (kumaran (and (not (on 2009.02.24 2009.04.28
-                                     2009.05.26 2009.06.30))
-                            (not (between 2009.03.10
-                                          2009.03.31)))))
-----
+  (availability (kim ...)
+                (theresa ...)
+                (kumaran (and (not (on 2009.02.24 2009.04.28
+                                       2009.05.26 2009.06.30))
+                              (not (between 2009.03.10
+                                            2009.03.31)))))
 
 states that `kumaran` will not be available on Feb 24, April 28, May 26, and
 June 30 of 2009; and also between March 10 and 31 of 2009.
@@ -231,10 +209,8 @@ Using the `role-difficulty` operator, you can identify specific roles to
 be either `:easy`, `:intermediate`, or `:hard`.  By default, all roles are
 considered to be `:easy`.  Example entries:
 
-----
-(role-difficulty (speaker :intermediate)
-                 (eval :hard))
-----
+  (role-difficulty (speaker :intermediate)
+                   (eval :hard))
 
 == Expertise
 
@@ -244,37 +220,29 @@ argument is a list whose first element is the member name and whose
 subsequent elements are the additional roles they can tackle beyond the
 `:easy` roles.  E.g.,
 
-----
-(expertise (rick topics eval))
-----
+  (expertise (rick topics eval))
 
 If you entered `:intermediate` or `:hard` instead of a role name, all roles
 that are intermediate or hard, respectively, are intended.
 
-----
-(expertise (rick ...)
-           (connie :intermediate))
-----
+  (expertise (rick ...)
+             (connie :intermediate))
 
 The keyword `:all` stands for _all_ roles.  Thus to encode the fact that
 `bash` can do anything:
 
-----
-(expertise (rick ...)
-           (connie ...)
-           (bash :all))
-----
+  (expertise (rick ...)
+             (connie ...)
+             (bash :all))
 
 You may also enter a list such as `(- speaker topics)` instead of a role.
 This requests that the `speaker` and `topics` roles be removed from that
 member’s expertise.
 
-----
-(expertise (rick ...)
-           (connie ...)
-           (bash ...)
-           (judyk (- speaker topics)))
-----
+  (expertise (rick ...)
+             (connie ...)
+             (bash ...)
+             (judyk (- speaker topics)))
 
 == Eagerness
 
@@ -285,11 +253,9 @@ the member name followed by a number between 0 and 3 inclusive: 0 for
 inactive; 1 for taking it slow; 2 for normal (the default); and 3 for
 fast track.  E.g.,
 
-----
-(eagerness (joseph 3)
-           (judyk 1)
-           (theresa 0))
-----
+  (eagerness (joseph 3)
+             (judyk 1)
+             (theresa 0))
 
 states that `theresa` is inactive, `judyk` wants to take it slow, and `joseph`
 wants the fast track.
@@ -314,9 +280,7 @@ was updated many times, perhaps more trials are needed.)
 
 To change the number of trials, use the `number-of-trials` operator, e.g.,
 
-----
-(number-of-trials 200)
-----
+  (number-of-trials 200)
 
 == Full-names
 
@@ -329,18 +293,14 @@ initial to disambiguate, e.g., `judyk` and `judyp` for two different Judys.
 To properly capitalize them in the output schedule (so the Judys don’t
 judge you), use the `full-names` operator:
 
-----
-(full-names (judyk "Judy K")
-            (judyp "Judy P"))
-----
+  (full-names (judyk "Judy K")
+              (judyp "Judy P"))
 
 You may add more complicated names:
 
-----
-(full-names (judyk ...)
-            (judyp ...)
-            (kelvin "William Thomson, First Baron Kelvin"))
-----
+  (full-names (judyk ...)
+              (judyp ...)
+              (kelvin "William Thomson, First Baron Kelvin"))
 
 For routine scheduling, however, a first name, sometimes enhanced with a
 disambiguating initial, is usually
@@ -355,19 +315,15 @@ multiple instances of a role in a meeting, each role instance gets a number suff
 different than the mere capitalization of the role symbol, you may use
 the `role-names` operator, e.g.,
 
-----
-(role-names (tm "Toastmaster")
-            (eval "Evaluator"))
-----
+  (role-names (tm "Toastmaster")
+              (eval "Evaluator"))
 
 == Club-name
 
 The name of the club is set using the operator `club-name`.  This name is
 used to title the schedules.
 
-----
-(club-name "The Articulators")
-----
+  (club-name "The Articulators")
 
 == History
 
