@@ -1,17 +1,23 @@
-.=* club3
+\input texrc
+\title club3
 
-club3 is a program to schedule a series of meetings of the
+\centerline{\url{https://github.com/ds26gte/club3}}
+\centerline{\urlh{http://ds26gte.github.io}{Dorai Sitaram}}
+
+\medskip
+
+\noindent
+club3 is a Common Lisp program that schedule a series of meetings of the
 Toastmaster™
 type fairly.
 
-.= Installation
+\beginsection Installation
 
 Get club3 from GitHub:
 
-.EX
+\begintt
 git clone https://github.com/ds26gte/club3
-.EE
-
+\endtt
 This produces
 a directory `club3`,
 which contains a shell script called `club3`.  Put a copy of or soft link to
@@ -33,7 +39,7 @@ Optional: You may compile `club3.lisp` (using the Common Lisp function
 `compile-file`).  Only `club3.lisp` need be explicitly compiled — it will
 take care of compiling the other `.lisp` files.
 
-.= Usage
+\beginsection Usage
 
 In a directory that contains all the data relevant to your club, call
 `club3` with the argument `schedules` or `profiles`.
@@ -44,12 +50,11 @@ influences the result.  This input data consists of an init file
 scheduling history of the club.  For an example, see
 the directory `examples/articulators` in the distribution.
 
-.= Generating schedules
+\beginsection Generating schedules
 
-.EX
+\begintt
 % club3 schedules
-.EE
-
+\endtt
 generates schedules.  (I.e., type `club3 schedules` at your Unix
 prompt `%`.)
 
@@ -60,7 +65,7 @@ The schedules consist of a `.txt` file for each date
 in the calendar (see below), and an HTML file `new-schedules.html`
 that lists the schedules as an easy-to-read and -print table.
 For a saved example, see
-`examples/articulators/current-schedules.html` in the club3 distro.
+{\tt examples/articulators/current-schedules.html} in the club3 distro.
 
 The generated `.txt` files can be inserted into `past-schedules` (see
 below) to influence the course of future schedules (created by future
@@ -70,17 +75,16 @@ that it accurately records the members who actually performed the roles
 (since club members typically negotiate substitutions up to the very
 last minute because of unforeseen circumstances).
 
-.= Generating profiles
+\beginsection Generating profiles
 
-.EX
+\begintt
 % club3 profiles
-.EE
-
+\endtt
 generates member profiles in a subdirectory called `profiles`, browsable
 via an `index.html` file.
 Example: `examples/articulators/profiles/index.html` in the distro.
 
-.= Initialization
+\beginsection Initialization
 
 The init file `club3rc.lisp` is essential.  At the very least, it must
 use the operators `members`, `lineups`, and `calendar` to respectively list
@@ -97,30 +101,29 @@ schedules more readable.
 
 Example: `examples/articulators/club3rc.lisp` in the distro.
 
-.= Members
+\beginsection Members
 
 The operator `members` lists the members in the club, a symbol for each
 member.  E.g.,
 
-.EX
+\begintt
 (members andrew brad charlie dan eileen fran george hilary ian judy
          kim lori marcia nelson oliver prasad rick stephanie theresa
          ulrich vanessa willy xavier yul zoe)
-.EE
+\endtt
 
-.= Lineups
+\beginsection Lineups
 
 The operator `lineups` introduces the various prescribed lineups for the
 club’s meetings.  Each lineup is a list whose first element is a keyword
 describing the type of meeting, and whose second element is a list of
 roles.
 
-.EX
+\begintt
 (lineups (:default
            (tm word joke poet speaker speaker speaker
                ge eval eval eval topics)))
-.EE
-
+\endtt
 Roles can repeat: the above lineup allows for three `speaker`s and three
 `eval`s.
 
@@ -128,12 +131,11 @@ The first lineup is considered the default lineup (even if it wasn’t
 explicitly named `:default`).  `lineups` can take more arguments if different
 lineups are possible (for different meetings).
 
-.EX
+\begintt
 (lineups (:default ...)
          (:topics-tuesday
           (tm word joke poet speaker speaker ge eval eval topics)))
-.EE
-
+\endtt
 This specifies a meeting of type `:topics-tuesday`, which differs from the
 `:default` meeting in that its lineup has only two `speaker`s and two `eval`s.
 (The purpose of this meeting is plausibly to allow more time for `topics`
@@ -146,30 +148,28 @@ of different type.  The idea is to list all the roles possible in all
 the meetings, and have the column for each meeting fill only the row
 that is relevant to it.
 
-.= Calendar
+\beginsection Calendar
 
 The operator `calendar` contains a series of dates for which meetings need
 to be scheduled.  Each date is given as a dotted integer YYYY.MM.DD; thus,
 2009.02.24 is 2009 Feb 24.
 
-.EX
+\begintt
 (calendar 2009.03.03
           2009.03.10)
-.EE
-
+\endtt
 If the type of meeting to be held on a particular date differs from the
 `:default` type of meeting, then the date is enclosed as the first element
 in a list whose second element is the type of meeting. E.g.,
 
-.EX
+\begintt
 (calendar 2009.03.03
           (2009.03.10 :contest)
           2009.03.17
           2009.03.24
           (2009.03.31 :skills-night)
           (2009.04.07 :topics-tuesday))
-.EE
-
+\endtt
 The type of meeting is typically one of the keywords introduced by the
 `lineups` operator (see above).  However, it can be anything.  If it isn’t one
 of the keywords introduced by `lineups`, then no schedule is presumed
@@ -177,7 +177,7 @@ for that date.  (This is useful to mark certain dates for special
 activities that do not require scheduling, or have been scheduled by
 other means.)
 
-.= Availability
+\beginsection Availability
 
 The `availability` operator contains exceptional information about the
 temporal availability of the members.  By default, members are assumed
@@ -196,47 +196,44 @@ yourself wanting to use `and`/`not`/`or` directly on dates.  E.g.,
 `(not (on 2009.03.17))`.]
 
 Dates are either in YYYY.MM.DD format or the keyword
-`:further-notice` (= ∞).
+`:further-notice` (= $\infty$).
 Examples:
 
-.EX
+\begintt
 (availabilty (kim (not (between 2009.03.10 2009.03.21))))
-.EE
-
+\endtt
 states that `kim` will not be available from March 3 to 21, 2009
 (inclusive).
 
-.EX
+\begintt
 (availability (kim ...)
               (theresa (not (until :further-notice))))
-.EE
-
+\endtt
 says that `theresa` will not be available until further notice.
 
-.EX
+\begintt
 (availability (kim ...)
               (theresa ...)
               (kumaran (and (not (on 2009.02.24 2009.04.28
                                      2009.05.26 2009.06.30))
                             (not (between 2009.03.10
                                           2009.03.31)))))
-.EE
-
+\endtt
 states that `kumaran` will not be available on Feb 24, April 28, May 26, and
 June 30 of 2009; and also between March 10 and 31 of 2009.
 
-.= Role-difficulty
+\beginsection Role-difficulty
 
 Using the `role-difficulty` operator, you can identify specific roles to
 be either `:easy`, `:intermediate`, or `:hard`.  By default, all roles are
 considered to be `:easy`.  Example entries:
 
-.EX
+\begintt
 (role-difficulty (speaker :intermediate)
                  (eval :hard))
-.EE
+\endtt
 
-.= Expertise
+\beginsection Expertise
 
 By default, every member is considered to be capable of doing all and
 only the `:easy` roles  To modify this, use the `expertise` operator.  Each
@@ -244,39 +241,36 @@ argument is a list whose first element is the member name and whose
 subsequent elements are the additional roles they can tackle beyond the
 `:easy` roles.  E.g.,
 
-.EX
+\begintt
 (expertise (rick topics eval))
-.EE
-
+\endtt
 If you entered `:intermediate` or `:hard` instead of a role name, all roles
 that are intermediate or hard, respectively, are intended.
 
-.EX
+\begintt
 (expertise (rick ...)
            (connie :intermediate))
-.EE
-
-The keyword `:all` stands for *all* roles.  Thus to encode the fact that
+\endtt
+The keyword `:all` stands for {\em all} roles.  Thus to encode the fact that
 `bash` can do anything:
 
-.EX
+\begintt
 (expertise (rick ...)
            (connie ...)
            (bash :all))
-.EE
-
+\endtt
 You may also enter a list such as `(- speaker topics)` instead of a role.
 This requests that the `speaker` and `topics` roles be removed from that
 member’s expertise.
 
-.EX
+\begintt
 (expertise (rick ...)
            (connie ...)
            (bash ...)
            (judyk (- speaker topics)))
-.EE
+\endtt
 
-.= Eagerness
+\beginsection Eagerness
 
 By default, all members are supposed to exhibit the same moderate level
 of eagerness to be scheduled.  However, using the `eagerness` operator,
@@ -285,16 +279,15 @@ the member name followed by a number between 0 and 3 inclusive: 0 for
 inactive; 1 for taking it slow; 2 for normal (the default); and 3 for
 fast track.  E.g.,
 
-.EX
+\begintt
 (eagerness (joseph 3)
            (judyk 1)
            (theresa 0))
-.EE
-
+\endtt
 states that `theresa` is inactive, `judyk` wants to take it slow, and `joseph`
 wants the fast track.
 
-.= Number-of-trials
+\beginsection Number-of-trials
 
 `club3` uses a system that ascribes demerits to each member for a role on
 any day (based on history, availability, etc).  Since a lineup is filled
@@ -314,11 +307,11 @@ was updated many times, perhaps more trials are needed.)
 
 To change the number of trials, use the `number-of-trials` operator, e.g.,
 
-.EX
+\begintt
 (number-of-trials 200)
-.EE
+\endtt
 
-.= Full-names
+\beginsection Full-names
 
 The symbol used for each member is typically capitalized  when printing
 out schedules or profiles; thus, `charlie` becomes “Charlie” and `marcia`
@@ -329,61 +322,64 @@ initial to disambiguate, e.g., `judyk` and `judyp` for two different Judys.
 To properly capitalize them in the output schedule (so the Judys don’t
 judge you), use the `full-names` operator:
 
-.EX
+\begintt
 (full-names (judyk "Judy K")
             (judyp "Judy P"))
-.EE
-
+\endtt
 You may add more complicated names:
 
-.EX
+\begintt
 (full-names (judyk ...)
             (judyp ...)
             (kelvin "William Thomson, First Baron Kelvin"))
-.EE
-
+\endtt
 For routine scheduling, however, a first name, sometimes enhanced with a
 disambiguating initial, is usually
 enough.
 
-.= Role-names
+\beginsection Role-names
 
 `lineups` uses abbreviated symbols for each role.  When printing out the
 schedule as an HTML file, the roles are capitalized, and if there are
 multiple instances of a role in a meeting, each role instance gets a number suffix
-(e.g., “Speaker #2”).  If you want the printed name for a role to be
+(e.g., “Speaker \#2”).  If you want the printed name for a role to be
 different than the mere capitalization of the role symbol, you may use
 the `role-names` operator, e.g.,
 
-.EX
+\begintt
 (role-names (tm "Toastmaster")
             (eval "Evaluator"))
-.EE
+\endtt
 
-.= Club-name
+\beginsection Club-name
 
 The name of the club is set using the operator `club-name`.  This name is
 used to title the schedules.
 
-.EX
+\begintt
 (club-name "The Articulators")
-.EE
+\endtt
 
-.= History
+\beginsection History
 
 The subdirectory `past-schedules` contains the schedules (the `.txt` files)
 generated for previous calendars — i.e., by previous calls to `club3 schedules`.  While optional, `past-schedules` is useful to maintain, as
 it provides the historical information necessary to ensure that no
 member is over- or underscheduled.
 
-.= System requirements
+\beginsection System requirements
 
 `club3` runs on any Common Lisp in a Unix-like environment, e.g.,
--: ABCL common-lisp.net/project/armedbear,
--: CLISP clisp.sf.net,
--: Clozure CL ccl.clozure.com,
--: CMUCL cmucl.org,
--: ECL ecls.sf.net, and
--: SBCL sbcl.sf.net.  (On Windows, you can get a Unix
-environment via -: Cygwin cygwin.com, which also
+\urlh{http://common-lisp.net/project/armedbear}{ABCL},
+\urlh{http://clisp.sf.net}{CLISP},
+\urlh{http://ccl.clozure.com}{Clozure CL},
+\urlh{http://cmucl.org}{CMUCL},
+\urlh{https://github.com/jcbeaudoin/MKCL}{MKCL},
+\urlh{http://ecls.sf.net}{ECL}, and
+\urlh{http://sbcl.sf.net}{SBCL}.
+(On Windows, you can get a Unix
+environment via \urlh{http://cygwin.com}{Cygwin}, which also
 provides CLISP.)
+
+\bye
+

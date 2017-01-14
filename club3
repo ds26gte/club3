@@ -1,4 +1,4 @@
-# last change 2015-06-02
+# last change 2017-01-13
 
 if test -z $CLUB3DIR
 then CLUB3DIR=~/src/club3/lisp
@@ -32,6 +32,11 @@ elif test "$LISP" = ecl
 then
 ecl -q -load $CLUB3DIR/club3 \
        -eval "(club3:generate :$club3arg)" -eval "(si:quit)"
+
+elif test "$LISP" = mkcl
+then
+mkcl -q -load $CLUB3DIR/club3 \
+       -eval "(club3:generate :$club3arg)" -eval "(mkcl:quit)"
 
 else # assume sbcl
 sbcl --noinform --load $CLUB3DIR/club3 \
